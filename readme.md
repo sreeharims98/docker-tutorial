@@ -1,6 +1,24 @@
 1. create Dockerfile
 
+```bash
+FROM node:18.16.0-alpine3.17
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+
+EXPOSE 4000
+
+CMD ["npm","start"]
+```
+
 2. add .dockerignore
+
+```bash
+node_modules
+```
 
 3. Build image
 
@@ -32,7 +50,7 @@ docker ps -a
 docker stop myapp_c1
 ```
 
-7. Restart a container
+8. Restart a container
 
 ```bash
 docker start myapp_c1
