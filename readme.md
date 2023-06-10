@@ -23,7 +23,7 @@ node_modules
 3. Build image
 
 ```bash
-docker build -t myapp
+docker build -t myapp .
 ```
 
 4. Run container
